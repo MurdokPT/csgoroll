@@ -1,0 +1,10 @@
+{{loading}}
+<div class="user-info" *ngIf="!!name && !loading">
+    <p class="name">{{name}}</p>
+    <p class="name">{{amount}}</p>
+</div>
+<button mat-raised-button color="accent" *ngIf="!name && !loading">
+    <a href="https://api-staging.csgoroll.com/auth/steam?redirectUri=http://localhost:4200">
+        {{'login_button' | translate}}
+    </a>
+</button>
